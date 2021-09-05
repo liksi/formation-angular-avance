@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "artist": {
+      "id": 1,
+      "firstname": "David",
+      "surname": "Bowie",
+      "birthdate": "1947-01-08",
+      "type": "SOLO"
+    },
+    "note": 5,
+    "name": "Let's Dance",
+    "date": "1983-04-14"
+  },
+  {
+    "id": 2,
+    "artist": {
+      "id": 2,
+      "firstname": "Michael",
+      "surname": "Jackson",
+      "birthdate": "1958-08-29",
+      "type": "SOLO"
+    },
+    "note": 5,
+    "name": "Thriller",
+    "date": "1982-11-30"
+  },
+  {
+    "id": 3,
+    "artist": {
+      "id": 3,
+      "firstname":"Queen",
+      "surname": "",
+      "type": "BAND"
+    },
+    "note": 5,
+    "name": "The Works",
+    "date": "1984-02-27"
+  }
+]
