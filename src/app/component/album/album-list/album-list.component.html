@@ -1,3 +1,21 @@
-<div class="container-xxl mt-3">
-    <p>album-list works!</p>
+<div class="container mt-3">
+    <h2>Mes albums</h2>
+    <table class="table table-striped" aria-label="Liste des albums">
+        <thead>
+        <tr>
+            <th scope="col">Titre</th>
+            <th scope="col">Artiste</th>
+            <th scope="col">Date</th>
+            <th scope="col">Note</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let album of albums">
+            <td>{{ album.name }}</td>
+            <td>{{ album.artist.firstname}} {{ album.artist.surname }}</td>
+            <td>{{ album.date }}</td>
+            <td>{{ album.note }}</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
