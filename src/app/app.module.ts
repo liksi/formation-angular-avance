@@ -6,6 +6,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { UserEditComponent } from './component/user/user-edit/user-edit.component';
 import { HomeComponent } from './component/home/home.component';
 import { AlbumListComponent } from './component/album/album-list/album-list.component';
+import { AlbumDetailComponent } from './component/album/album-detail/album-detail.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { AlbumListComponent } from './component/album/album-list/album-list.comp
     UserEditComponent,
     HomeComponent,
     AlbumListComponent,
+    AlbumDetailComponent,
   ],
   imports: [
     BrowserModule,

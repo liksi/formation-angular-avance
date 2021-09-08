@@ -10,7 +10,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let album of albums">
+        <tr *ngFor="let album of albums" (dblclick)="navigateToDetail(album.id)">
             <td>{{ album.name }}</td>
             <td>{{ album.artist.firstname}} {{ album.artist.surname }}</td>
             <td>{{ album.date }}</td>

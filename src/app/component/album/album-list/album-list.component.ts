@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlbumService } from "../../../service/album/album.service";
 import { Album } from "../../../model/album.model";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-album-list',
@@ -12,7 +13,8 @@ export class AlbumListComponent implements OnInit {
   albums: Album[] = [];
 
   constructor(
-    private albumService: AlbumService
+    private albumService: AlbumService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -20,5 +22,9 @@ export class AlbumListComponent implements OnInit {
       albums => this.albums = albums as Album[],
       error => console.log(error)
     )
+  }
+
+  navigateToDetail(albumId: number) {
+    this.router.navigate(['/album', albumId]);
   }
 }
