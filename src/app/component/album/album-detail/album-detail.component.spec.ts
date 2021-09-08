@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AlbumDetailComponent } from './album-detail.component';
-import { Router } from "@angular/router";
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe('AlbumDetailComponent', () => {
   let component: AlbumDetailComponent;
@@ -9,9 +8,10 @@ describe('AlbumDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AlbumDetailComponent ]
+      declarations: [AlbumDetailComponent],
+      imports: [RouterTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
