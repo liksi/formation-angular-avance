@@ -1,7 +1,7 @@
 <div class="container-xxl">
     <div *ngIf="album">
-        <h2>{{ album?.name }}</h2>
-        <div>Sorti le {{ album?.date }} avec une note de {{ album?.note }}</div>
-        <div *ngIf="album.description">Description : {{ album?.description }}</div>
+        <h2>{{ album.name }}</h2>
+        <div>Sorti le {{ album.date }} avec une note de {{ album.note }}</div>
+        <div *ngIf="album.description">Description : {{ album.description }}</div>
     </div>
 </div>
