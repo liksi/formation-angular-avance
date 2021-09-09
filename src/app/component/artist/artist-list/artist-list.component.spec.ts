@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ArtistListComponent } from './artist-list.component';
+import { IndividuPipe } from "../../../pipe/individu.pipe";
 
 describe('ArtistListComponent', () => {
   let component: ArtistListComponent;
@@ -8,7 +9,10 @@ describe('ArtistListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ArtistListComponent ]
+      declarations: [
+        ArtistListComponent,
+        IndividuPipe
+      ]
     })
     .compileComponents();
   });

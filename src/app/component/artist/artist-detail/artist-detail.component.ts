@@ -19,7 +19,7 @@ export class ArtistDetailComponent implements OnInit {
 
   ngOnInit(): void {
     if(this.artist && this.artist.id) {
-      this.albumService.countAlbumsByArtist(this.artist.id).then(
+      this.albumService.countAlbumsByArtist(this.artist.id).subscribe(
         nbAlbums => this.nbAlbums = nbAlbums,
         error => console.log(error)
       )

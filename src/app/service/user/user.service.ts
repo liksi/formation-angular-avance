@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from "../../model/user.model";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class UserService {
     surname: 'Doe'
   }
 
-  user: Promise<User> = Promise.resolve(this.defaultUser);
+  user: BehaviorSubject<User> = new BehaviorSubject(this.defaultUser);
 
   constructor() {
     // TODO

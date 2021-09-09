@@ -26,11 +26,9 @@ export class AlbumDetailComponent implements OnInit {
   }
 
   loadAlbum(albumId: number) {
-    this.albumService.getAlbumById(albumId).then(
+    this.albumService.getAlbumById(albumId).subscribe(
       album => this.album = album,
       error => console.log(error)
     )
   }
-
-
 }

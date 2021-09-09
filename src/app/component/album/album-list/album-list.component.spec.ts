@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AlbumListComponent } from './album-list.component';
 import { RouterTestingModule } from "@angular/router/testing";
 import { Router } from "@angular/router";
+import { IndividuPipe } from "../../../pipe/individu.pipe";
 
 describe('AlbumListComponent', () => {
   let component: AlbumListComponent;
@@ -11,7 +12,10 @@ describe('AlbumListComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [AlbumListComponent]
+      declarations: [
+        AlbumListComponent,
+        IndividuPipe
+      ]
     })
       .compileComponents();
   });
