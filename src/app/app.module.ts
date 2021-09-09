@@ -7,6 +7,7 @@ import { UserEditComponent } from './component/user/user-edit/user-edit.componen
 import { HomeComponent } from './component/home/home.component';
 import { AlbumListComponent } from './component/album/album-list/album-list.component';
 import { AlbumDetailComponent } from './component/album/album-detail/album-detail.component';
+import { ArtistDetailComponent } from "./component/artist/artist-detail/artist-detail.component";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AlbumDetailComponent } from './component/album/album-detail/album-detai
     HomeComponent,
     AlbumListComponent,
     AlbumDetailComponent,
+    ArtistDetailComponent
   ],
   imports: [
     BrowserModule,

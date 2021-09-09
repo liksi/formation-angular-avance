@@ -11,7 +11,7 @@ describe('AlbumListComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [AlbumListComponent],
+      declarations: [AlbumListComponent]
     })
       .compileComponents();
   });
@@ -28,11 +28,14 @@ describe('AlbumListComponent', () => {
   });
 
   it('should navigate to album detail', () => {
+    // Arrange
     let albumId = 2;
     let routerSpy = spyOn(router, 'navigate')
 
+    // Act
     component.navigateToDetail(albumId);
 
+    // Assert
     expect(routerSpy).toHaveBeenCalledOnceWith(['/album', albumId]);
   });
 });
