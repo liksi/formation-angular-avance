@@ -1,0 +1,17 @@
+<div class="container-xxl mt-3" style="">
+    <h2>Mes artistes</h2>
+    <div style="display: flex">
+        <div style="margin-right: 20px">
+            <table class="table table-striped" aria-label="Liste des artistes">
+                <tbody>
+                <tr *ngFor="let artist of artists" (click)="selectedArtist = artist">
+                    <td>{{ artist.firstname }} {{ artist.surname}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <app-artist-detail *ngIf="selectedArtist" [artist]="selectedArtist"></app-artist-detail>
+        </div>
+    </div>
+</div>
