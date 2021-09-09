@@ -1,7 +1,7 @@
 <div class="artist-container">
     <div *ngIf="artist">
-        <h3>{{ artist?.firstname }} {{ artist?.surname }}</h3>
-        <div *ngIf="artist.birthdate">Né le {{ artist.birthdate }}</div>
-        <div>Type : {{ artist.type }}</div>
+        <h3>{{ artist | individu }}</h3>
+        <div *ngIf="artist.birthdate">Né le {{ artist.birthdate | date:'dd/MM/yyyy' }}</div>
+        <div>Type : {{ artist.type | artistType }}</div>
     </div>
 </div>

@@ -1,7 +1,7 @@
-export interface Artist {
+import { Individu } from "./individu.model";
+
+export interface Artist extends Individu {
     id: number,
-    firstname: string,
-    surname: string,
     birthdate: string,
     type: ArtistTypeEnum;
 }

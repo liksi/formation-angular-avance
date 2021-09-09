@@ -12,8 +12,8 @@
         <tbody>
         <tr *ngFor="let album of albums" (dblclick)="navigateToDetail(album.id)">
             <td>{{ album.name }}</td>
-            <td>{{ album.artist.firstname}} {{ album.artist.surname }}</td>
-            <td>{{ album.date }}</td>
+            <td>{{ album.artist | individu }}</td>
+            <td>{{ album.date | date:'dd/MM/yyyy' }}</td>
             <td>{{ album.note }}</td>
         </tr>
         </tbody>

@@ -6,18 +6,11 @@ import { AlbumService } from "../../service/album/album.service";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  nbAlbums: number = 0;
+  nbAlbums?: Promise<number>;
 
   constructor(private albumService: AlbumService) {
+    this.nbAlbums = this.albumService.countAllAlbums();
   }
-
-  ngOnInit(): void {
-    this.albumService.countAllAlbums().then(
-      count => this.nbAlbums = count,
-      error => console.log(error)
-    )
-  }
-
 }

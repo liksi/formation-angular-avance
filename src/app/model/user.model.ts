@@ -1,4 +1,5 @@
-export interface User {
-  name: string;
-  surname: string;
+import { Individu } from "./individu.model";
+
+export interface User extends Individu {
+
 }

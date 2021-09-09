@@ -7,7 +7,7 @@ import { User } from "../../model/user.model";
 export class UserService {
 
   private defaultUser: User = {
-    name: 'John',
+    firstname: 'John',
     surname: 'Doe'
   }
 
