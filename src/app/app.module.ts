@@ -11,6 +11,7 @@ import { ArtistDetailComponent } from "./component/artist/artist-detail/artist-d
 import { ArtistListComponent } from './component/artist/artist-list/artist-list.component';
 import { IndividuPipe } from './pipe/individu.pipe';
 import { ArtistTypePipe } from './pipe/artist-type.pipe';
+import { HighlightDirective } from './directive/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ArtistTypePipe } from './pipe/artist-type.pipe';
     ArtistDetailComponent,
     ArtistListComponent,
     IndividuPipe,
-    ArtistTypePipe
+    ArtistTypePipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
