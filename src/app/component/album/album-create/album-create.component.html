@@ -1,0 +1,36 @@
+<div class="container-xxl mt-3">
+    <h1>Création d'un album</h1>
+    <div style="display: flex">
+        <div class="labels">
+            <div>Id : </div>
+            <div>Nom : </div>
+            <div>Description : </div>
+            <div>Artiste : </div>
+            <div>Note : </div>
+            <div>Date : </div>
+        </div>
+        <form #albumsForm="ngForm">
+            <div>
+                <input name="id" type="number" [(ngModel)]="album.id" required>
+            </div>
+            <div>
+                <input name="firstname" type="text" [(ngModel)]="album.name" required minlength="3">
+            </div>
+            <div>
+                <input name="description" type="text" [(ngModel)]="album.description">
+            </div>
+            <div>
+                <select name="type" [(ngModel)]="album.artist" required>
+                    <option *ngFor="let artist of artists | async" [ngValue]="artist">{{ artist | individu }}</option>
+                </select>
+            </div>
+            <div>
+                <input name="note" type="number" [(ngModel)]="album.note" required>
+            </div>
+            <div>
+                <input name="date" type="text" [(ngModel)]="album.date" required>
+            </div>
+        </form>
+    </div>
+    <button [hidden]="!albumsForm.form.valid || albumsForm.form.pristine" class="btn btn-primary pull-right mt-3" (click)="addAlbum()">Ajouter</button>
+</div>

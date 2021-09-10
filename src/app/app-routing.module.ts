@@ -6,6 +6,7 @@ import { AlbumListComponent } from "./component/album/album-list/album-list.comp
 import { AlbumDetailComponent } from "./component/album/album-detail/album-detail.component";
 import { ArtistListComponent } from "./component/artist/artist-list/artist-list.component";
 import { ArtistCreateComponent } from "./component/artist/artist-create/artist-create.component";
+import { AlbumCreateComponent } from "./component/album/album-create/album-create.component";
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'albums',
     component: AlbumListComponent
+  },
+  {
+    path: 'album/create',
+    component: AlbumCreateComponent
   },
   {
     path: 'album/:id',

@@ -14,6 +14,7 @@ import { ArtistTypePipe } from './pipe/artist-type.pipe';
 import { HighlightDirective } from './directive/highlight.directive';
 import { ArtistCreateComponent } from './component/artist/artist-create/artist-create.component';
 import { FormsModule } from "@angular/forms";
+import { AlbumCreateComponent } from './component/album/album-create/album-create.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormsModule } from "@angular/forms";
     IndividuPipe,
     ArtistTypePipe,
     HighlightDirective,
-    ArtistCreateComponent
+    ArtistCreateComponent,
+    AlbumCreateComponent
   ],
   imports: [
     BrowserModule,

@@ -6,5 +6,6 @@
         <div *ngIf="album.artist" class="mt-20">
             <app-artist-detail [artist]="album.artist"></app-artist-detail>
         </div>
+        <button class="btn btn-primary pull-right mt-3" (click)="deleteAlbum()">Supprimer</button>
     </div>
 </div>
