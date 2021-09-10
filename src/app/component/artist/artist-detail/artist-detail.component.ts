@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Artist } from "../../../model/artist.model";
 import { AlbumService } from "../../../service/album/album.service";
+import { ArtistService } from "../../../service/artist/artist.service";
 
 @Component({
   selector: 'app-artist-detail',
@@ -12,9 +13,15 @@ export class ArtistDetailComponent implements OnInit {
   @Input()
   artist?: Artist;
 
+  @Input()
+  editable: boolean = false;
+
   nbAlbums: number = 0;
 
-  constructor(private albumService: AlbumService) {
+  constructor(
+    private albumService: AlbumService,
+    private artistService: ArtistService
+  ) {
   }
 
   ngOnInit(): void {
@@ -23,6 +30,17 @@ export class ArtistDetailComponent implements OnInit {
         nbAlbums => this.nbAlbums = nbAlbums,
         error => console.log(error)
       )
+    }
+  }
+
+  deleteArtist(): void {
+    if (this.artist) {
+      this.artistService.deleteArtist(this.artist.id).subscribe(
+        result => {
+          if (result) {
+            this.artist = undefined;
+          }
+        });
     }
   }
 }

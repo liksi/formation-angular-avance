@@ -1,0 +1,33 @@
+<div class="container-xxl mt-3">
+    <h1>Création d'un artiste</h1>
+    <div style="display: flex">
+        <div class="labels">
+            <div>Id : </div>
+            <div>Prénom : </div>
+            <div>Nom : </div>
+            <div>Date : </div>
+            <div>Type : </div>
+        </div>
+        <form #artistForm="ngForm">
+            <div>
+                <input name="id" type="number" [(ngModel)]="artist.id" required #id="ngModel">
+            </div>
+            <div>
+                <input name="firstname" type="text" [(ngModel)]="artist.firstname" required minlength="3">
+            </div>
+            <div>
+                <input name="surname" type="text" [(ngModel)]="artist.surname" required minlength="3">
+            </div>
+            <div>
+                <input name="birthdate" type="text" [(ngModel)]="artist.birthdate" required>
+            </div>
+            <div>
+                <select name="type" [(ngModel)]="artist.type" required>
+                    <option [ngValue]="'SOLO'">Solo</option>
+                    <option [ngValue]="'BAND'">Band</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <button [hidden]="!artistForm.form.valid || artistForm.form.pristine" class="btn btn-primary pull-right mt-3" (click)="addArtist()">Ajouter</button>
+</div>

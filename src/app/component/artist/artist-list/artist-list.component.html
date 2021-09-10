@@ -9,9 +9,12 @@
                 </tr>
                 </tbody>
             </table>
+            <a routerLink="/artist/create">
+                <button class="btn btn-primary pull-right mt-3">Créer un artiste</button>
+            </a>
         </div>
         <div>
-            <app-artist-detail *ngIf="selectedArtist" [artist]="selectedArtist"></app-artist-detail>
+            <app-artist-detail *ngIf="selectedArtist" [artist]="selectedArtist" [editable]="true"></app-artist-detail>
         </div>
     </div>
 </div>

@@ -5,6 +5,7 @@ import { HomeComponent } from "./component/home/home.component";
 import { AlbumListComponent } from "./component/album/album-list/album-list.component";
 import { AlbumDetailComponent } from "./component/album/album-detail/album-detail.component";
 import { ArtistListComponent } from "./component/artist/artist-list/artist-list.component";
+import { ArtistCreateComponent } from "./component/artist/artist-create/artist-create.component";
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'artists',
     component: ArtistListComponent
+  },
+  {
+    path: 'artist/create',
+    component: ArtistCreateComponent
   },
   {
     path: 'edit-user',

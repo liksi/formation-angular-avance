@@ -12,6 +12,8 @@ import { ArtistListComponent } from './component/artist/artist-list/artist-list.
 import { IndividuPipe } from './pipe/individu.pipe';
 import { ArtistTypePipe } from './pipe/artist-type.pipe';
 import { HighlightDirective } from './directive/highlight.directive';
+import { ArtistCreateComponent } from './component/artist/artist-create/artist-create.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -25,11 +27,13 @@ import { HighlightDirective } from './directive/highlight.directive';
     ArtistListComponent,
     IndividuPipe,
     ArtistTypePipe,
-    HighlightDirective
+    HighlightDirective,
+    ArtistCreateComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,8 @@
-<div class="artist-container">
-    <div *ngIf="artist">
+<div class="artist-container" *ngIf="artist">
+    <div>
         <h3>{{ artist | individu }}</h3>
         <div *ngIf="artist.birthdate">Né le {{ artist.birthdate | date:'dd/MM/yyyy' }}</div>
         <div>Type : {{ artist.type | artistType }}</div>
+        <button *ngIf="editable" class="btn btn-primary pull-right mt-3" (click)="deleteArtist()">Supprimer</button>
     </div>
 </div>
